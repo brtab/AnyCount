@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre del Producto"
-            style="@style/Animation.Design.BottomSheetDialog"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:endIconMode="clear_text"
             android:layout_margin="8dp">
 
@@ -39,6 +39,26 @@
             android:layout_margin="8dp"
             style="@style/Theme.MaterialComponents"
             android:padding="8dp"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etSubcategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Seleccionar subcategoria.."
+            android:layout_gravity="bottom"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            app:endIconMode="dropdown_menu"
+
+            android:layout_margin="8dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/tvSubcategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"/>
+        </com.google.android.material.textfield.TextInputLayout>
     </com.google.android.material.card.MaterialCardView>
+
 
 </FrameLayout>

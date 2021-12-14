@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import com.example.aplicacioncuentas.databinding.FragmentCreateProductBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
@@ -36,6 +38,11 @@ class CreateProductFragment : Fragment() {
                 }
                 .show()
         }
+
+        val items = listOf("Material", "Design", "Components", "Android")
+        val adapter = ArrayAdapter(requireContext(), R.layout.list_item, items)
+        (binding.tvSubcategory.text as? AutoCompleteTextView)?.setAdapter(adapter)
+
     }
 
 
